@@ -1,0 +1,895 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Guides Touristiques</title>
+    <style>
+        /* Style général */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        /* Section des guides */
+        .guides-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .guide-card {
+            background-color: white;
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .guide-card:hover {
+            transform: scale(1.05);
+        }
+
+        .guide-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .guide-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .guide-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Vidéo */
+        .video-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+        }
+        .content-box {
+           left: 40px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 800px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .content-box h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content-box p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h1>Nos Guides Touristiques</h1>
+    </header>
+
+   
+    <section class="guides-section">
+      
+        <div class="guide-card">
+            <img src="jean.jpg" alt="Guide 1">
+            <h3>Jean Dupont</h3>
+            <p><strong>Numéro :</strong> +212 123 456 789</p>
+            <p><strong>Pays visités :</strong> Maroc, Espagne, Italie</p>
+            <p><strong>g-mail :</strong>Jean Dupont@gmail.com</p>
+        </div>
+        
+        <div class="guide-card">
+            <img src="marie.jpg" alt="Guide 2">
+            <h3>Marie Leclerc</h3>
+            <p><strong>Numéro :</strong> +212 234 567 890</p>
+            <p><strong>Pays visités :</strong> France, Maroc, Égypte</p>
+            <p><strong>g-mail :</strong>marielecler@gmail.com</p>
+        </div>
+
+        
+        <div class="guide-card">
+            <img src="ali.jpg" alt="Guide 3">
+            <h3>Mohamed Ali</h3>
+            <p><strong>Numéro :</strong> +212 345 678 901</p>
+            <p><strong>Pays visités :</strong> Maroc, Turquie, Jordanie</p>
+            <p><strong>g-mail :</strong>mohammedali@gmail.com</p>
+        </div>
+
+        <div class="guide-card">
+            <img src="sidi.jpg" alt="Guide 4">
+            <h3>Amina Sidi</h3>
+            <p><strong>Numéro :</strong> +212 456 789 012</p>
+            <p><strong>Pays visités :</strong> Maroc, Tunisie, France</p>
+            <p><strong>g-mail :</strong>aminasidi@gmail.com</p>
+        </div>
+
+   
+        <div class="guide-card">
+            <img src="tazi.jpg" alt="Guide 5">
+            <h3>Ali Tazi</h3>
+            <p><strong>Numéro :</strong> +212 567 890 123</p>
+            <p><strong>Pays visités :</strong> Maroc, Sénégal, Italie</p>
+            <p><strong>g-mail :</strong>alitazi@gmail.com</p>
+        </div>
+
+      
+        <div class="guide-card">
+            <img src="banali.jpg" alt="Guide 6">
+            <h3>Leila Benali</h3>
+            <p><strong>Numéro :</strong> +212 678 901 234</p>
+            <p><strong>Pays visités :</strong> Maroc, Grèce, Portugal</p>
+            <p><strong>g-mail :</strong>leilabenali@gmail.com</p>
+        </div>
+
+       
+        <div class="guide-card">
+            <img src="youssef.jpg" alt="Guide 7">
+            <h3>Youssef Idrissi</h3>
+            <p><strong>Numéro :</strong> +212 789 012 345</p>
+            <p><strong>Pays visités :</strong> Maroc, Espagne, Allemagne</p>
+            <p><strong>g-mail :</strong>youssefidrissi@gmail.com</p>
+        </div>
+
+        <div class="guide-card">
+            <img src="fatima.jpg" alt="Guide 8">
+            <h3>Fatima Zahra</h3>
+            <p><strong>Numéro :</strong> +212 890 123 456</p>
+            <p><strong>Pays visités :</strong> Maroc, Algérie, Canada</p>
+            <p><strong>g-mail :</strong>fatimazahra@gmail.com</p>
+        </div>
+
+        <div class="guide-card">
+            <img src="omar.jpg" alt="Guide 9">
+            <h3>Omar Farouk</h3>
+            <p><strong>Numéro :</strong> +212 901 234 567</p>
+            <p><strong>Pays visités :</strong> Maroc, Égypte, France</p>
+            <p><strong>g-mail :</strong>omarfarouk@gmail.com</p>
+        </div>
+ 
+        <div class="guide-card">
+            <img src="karim.jpg" alt="Guide 10">
+            <h3>Karim Khadiri</h3>
+            <p><strong>Numéro :</strong> +212 012 345 678</p>
+            <p><strong>Pays visités :</strong> Maroc, Italie, Belgique</p>
+            <p><strong>g-mail</strong>karimkhadiri@gmail.com</p>
+        </div>
+    </section>
+    <div class="content-box">
+        <h2>Nos Guides Touristiques : Des Experts Passionnés pour Vous Accompagner</h2>
+        <p>
+            Nos guides touristiques sont des professionnels expérimentés, passionnés par le partage de leur culture et l'accompagnement des voyageurs dans leurs découvertes. Chacun d'entre eux possède une connaissance approfondie des sites historiques, des traditions locales, et des richesses naturelles qui font la beauté de notre patrimoine. Non seulement ils parlent plusieurs langues, mais ils ont également exploré de nombreux pays, ce qui leur permet de vous offrir une expérience authentique et enrichissante. Leur mission est de vous offrir un service personnalisé, d’adapter les visites à vos envies et de répondre à toutes vos questions, pour que chaque moment de votre voyage soit inoubliable. Avec eux, vous ne serez pas seulement un simple spectateur, mais un véritable acteur de l'aventure.
+        </p>
+    </div>
+     <section class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo des guides" allowfullscreen></iframe>
+    </section>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Guides Touristiques</title>
+    <style>
+        /* Style général */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: url(acceuil.jpg);
+            color: #333;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        header{
+    display: flex;
+    color:#fefefe;         
+    width: 90%;
+    height: 50px;
+    border-radius: 1rem;
+    margin-top: 30px;
+    background-color: rgba(239, 230, 230,0.253);
+    backdrop-filter: blur(3px);
+    box-shadow: 8px 8px 15px black
+               -8px -8px 15px black;
+    overflow: hidden;
+    position:fixed;
+    z-index: 100;
+}
+.logo{
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.logo img{
+    width: 40px;
+}
+.menu{
+   
+    width: 50%;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.menu ul li {
+    list-style: none;
+    margin-right: 30px;
+}
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:#fefefe;
+    position: relative;
+}
+.menu ul li a:after{
+    content: '';
+    bottom: -3px;
+    display: block;
+    height: 2px;
+    left:50%;
+    position:absolute;
+    background-color: #fefefe;
+    transition: width 0.3s ease 0s,left 0.3s ease 0s;
+    width: 0px;
+}
+.menu ul li a:hover,
+.menu ul li a:hover:after,
+.menu ul li a.active::after,
+.menu ul li a.active
+{
+  width: 100%;
+  left: 0;
+  font-weight: bold;  
+}
+.search-bar{
+   width: 30%;
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.search-bar p{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.search-bar input{
+    background-color: #fefefe;
+    outline: none;
+    padding: 5px;
+    border-top-left-radius:13px ;
+    border-bottom-left-radius: 13px;
+    border: none;
+}
+.search-bar .search-icon{
+    background-color: #fefefe;
+    outline: none;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border: none;
+    color:#333;
+    font-size: 1rem;
+    padding: 5.5px;
+    display: flex;
+    align-items: center;
+}
+
+        /*header {
+            text-align: center;
+            padding: 20px;
+            background-color: #08380a22;
+            color: white;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+         Section des guides */
+        .guides-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .guide-card {
+            background: linear-gradient(#88b4eb,white);
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .guide-card:hover {
+            transform: scale(1.05);
+        }
+
+        .guide-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .guide-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .guide-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Box avec le texte valorisant les guides 
+        .content-box {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 0;
+            background-color: #1b01ac;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .content-box h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-box p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }*/
+
+        /* Vidéo */
+        .video-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 420px; /* hauteur de la vidéo */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 300px; /* L'iframe occupe toute la hauteur du conteneur */
+            border: none;
+        }
+         /* Footer */
+     footer {
+    background: #004c80;
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: #ff7f27;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*
+.about, .services {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation pour le texte 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}*/
+.about, .services {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  background-color: #f4ee90;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInImage 1.5s forwards;
+}
+
+/* Animation pour le texte */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation pour l'image */
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Section Pourquoi Choisir notre Guide */
+.why-choose-us {
+  background-color: #e3f2fd;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 15px;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.why-choose-us p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Animation pour le texte */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.png" alt=""></div>
+        <div class="menu">
+            <ul>
+               <li><a href="acceuil.html" class="active">home</a></li>
+               <li><a href="test.html">oubout us</a></li> 
+               <li><a href="aboutus.html">pays</a></li> 
+               <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <p>search</p>
+            <input type="text">
+            <div class="search-icon">
+               <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <!--<section class="video-container">
+        <img src="header.jpg" title="Vidéo des guides" allowfullscreen></img>
+    </section>-->
+
+    <!-- En-tête 
+    <header>
+        <h1>Nos Guides Touristiques</h1>
+    </header>-->
+
+    <!-- Section des guides -->
+    <section class="guides-section">
+        <!-- Guide 1 -->
+        <div class="guide-card">
+            <img src="jean.jpg" alt="Guide 1">
+            <h3>Jean Dupont</h3>
+            <p><strong>Numéro :</strong> +212 123 456 789</p>
+            <p><strong>Pays visités :</strong> Maroc, Espagne, Italie</p>
+            <p><strong>g-mail :</strong>JeanDupont@gmail.com</p>
+        </div>
+        
+        <!-- Guide 2 -->
+        <div class="guide-card">
+            <img src="marie.jpg" alt="Guide 2">
+            <h3>Marie Leclerc</h3>
+            <p><strong>Numéro :</strong> +212 234 567 890</p>
+            <p><strong>Pays visités :</strong> France, Maroc, Égypte</p>
+            <p><strong>g-mail :</strong>marielecler@gmail.com</p>
+        </div>
+
+        <!-- Guide 3 -->
+        <div class="guide-card">
+            <img src="ali.jpg" alt="Guide 3">
+            <h3>Mohamed Ali</h3>
+            <p><strong>Numéro :</strong> +212 345 678 901</p>
+            <p><strong>Pays visités :</strong> Maroc, Turquie, Jordanie</p>
+            <p><strong>g-mail :</strong>mohammedali@gmail.com</p>
+        </div>
+
+        <!-- Guide 4 -->
+        <div class="guide-card">
+            <img src="sidi.jpg" alt="Guide 4">
+            <h3>Amina Sidi</h3>
+            <p><strong>Numéro :</strong> +212 456 789 012</p>
+            <p><strong>Pays visités :</strong> Maroc, Tunisie, France</p>
+            <p><strong>g-mail :</strong>aminasidi@gmail.com</p>
+        </div>
+
+        <!-- Guide 5 -->
+        <div class="guide-card">
+            <img src="tazi.jpg" alt="Guide 5">
+            <h3>Ali Tazi</h3>
+            <p><strong>Numéro :</strong> +212 567 890 123</p>
+            <p><strong>Pays visités :</strong> Maroc, Sénégal, Italie</p>
+            <p><strong>g-mail :</strong>alitazi@gmail.com</p>
+        </div>
+
+        <!-- Guide 6 -->
+        <div class="guide-card">
+            <img src="banali.jpg" alt="Guide 6">
+            <h3>Leila Benali</h3>
+            <p><strong>Numéro :</strong> +212 678 901 234</p>
+            <p><strong>Pays visités :</strong> Maroc, Grèce, Portugal</p>
+            <p><strong>g-mail :</strong>leilabenali@gmail.com</p>
+        </div>
+
+        <!-- Guide 7 -->
+        <div class="guide-card">
+            <img src="youssef.jpg" alt="Guide 7">
+            <h3>Youssef Idrissi</h3>
+            <p><strong>Numéro :</strong> +212 789 012 345</p>
+            <p><strong>Pays visités :</strong> Maroc, Espagne, Allemagne</p>
+            <p><strong>g-mail :</strong>youssefidrissi@gmail.com</p>
+        </div>
+
+        <!-- Guide 8 -->
+        <div class="guide-card">
+            <img src="fatima.jpg" alt="Guide 8">
+            <h3>Fatima Zahra</h3>
+            <p><strong>Numéro :</strong> +212 890 123 456</p>
+            <p><strong>Pays visités :</strong> Maroc, Algérie, Canada</p>
+            <p><strong>g-mail :</strong>fatimazahra@gmail.com</p>
+        </div>
+
+        <!-- Guide 9 -->
+        <div class="guide-card">
+            <img src="omar.jpg" alt="Guide 9">
+            <h3>Omar Farouk</h3>
+            <p><strong>Numéro :</strong> +212 901 234 567</p>
+            <p><strong>Pays visités :</strong> Maroc, Égypte, France</p>
+            <p><strong>g-mail :</strong>omarfarouk@gmail.com</p>
+        </div>
+
+        <!-- Guide 10 -->
+        <div class="guide-card">
+            <img src="karim.jpg" alt="Guide 10">
+            <h3>Karim Khadiri</h3>
+            <p><strong>Numéro :</strong> +212 012 345 678</p>
+            <p><strong>Pays visités :</strong> Maroc, Italie, Belgique</p>
+            <p><strong>g-mail</strong>karimkhadiri@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Box avec le texte valorisant les guides 
+    <div class="content-box">
+        <h2>Nos Guides Touristiques : Des Experts Passionnés pour Vous Accompagner</h2>
+        <p>
+            Nos guides touristiques sont des professionnels expérimentés, passionnés par le partage de leur culture et l'accompagnement des voyageurs dans leurs découvertes. Chacun d'entre eux possède une connaissance approfondie des sites historiques, des traditions locales, et des richesses naturelles qui font la beauté de notre patrimoine. Non seulement ils parlent plusieurs langues, mais ils ont également exploré de nombreux pays, ce qui leur permet de vous offrir une expérience authentique et enrichissante. Leur mission est de vous offrir un service personnalisé, d’adapter les visites à vos envies et de répondre à toutes vos questions, pour que chaque moment de votre voyage soit inoubliable. Avec eux, vous ne serez pas seulement un simple spectateur, mais un véritable acteur de l'aventure.
+        </p>
+    </div>-->
+
+    <!-- Vidéo 
+    <section class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo des guides" allowfullscreen></iframe>
+    </section>-->
+    <!-- Footer 
+
+    <section class="services">
+        <div class="service-box">
+          <h3>Visites guidées</h3>
+          <p>Profitez d'une visite guidée personnalisée de la ville avec un expert local.</p>
+        </div>
+        <div class="service-box">
+          <h3>Réservation d'hôtel</h3>
+          <p>Nous vous aidons à réserver des hôtels avec les meilleures offres à proximité.</p>
+        </div>
+        <div class="service-box">
+          <h3>Transport</h3>
+          <p>Nos services de transport vous permettent de voyager facilement à travers la ville.</p>
+        </div>
+      </section>-->
+      <section class="services">
+        <div class="service-box">
+          <h3>Visites guidées</h3>
+          <p>Profitez d'une visite guidée personnalisée de la ville avec un expert local.</p>
+          <img src="sevices.jpg" alt="Visites guidées" class="service-image">
+        </div>
+        <div class="service-box">
+          <h3>Réservation d'hôtel</h3>
+          <p>Nous vous aidons à réserver des hôtels avec les meilleures offres à proximité.</p>
+          <img src="hotel.jpg" alt="Réservation d'hôtel" class="service-image">
+        </div>
+        <div class="service-box">
+          <h3>Transport</h3>
+          <p>Nos services de transport vous permettent de voyager facilement à travers la ville.</p>
+          <img src="bus.jpg" alt="Transport" class="service-image">
+        </div>
+      </section>
+
+
+      <section class="why-choose-us">
+        <h2>Pourquoi choisir notre guide ?</h2>
+        <p>Notre équipe de guides locaux expérimentés est passionnée par l'histoire et la culture de notre ville. Nous offrons des visites personnalisées qui s'adaptent à vos intérêts, que vous soyez un amateur d'art, un passionné d'architecture ou un aventurier en quête de découvertes authentiques. Choisir notre service, c'est s'assurer une expérience enrichissante et mémorable, loin des circuits touristiques classiques.</p>
+        <h2>Les caractéristiques de nos guides et de notre service</h2>
+        <p>Nos guides sont des experts locaux, passionnés par l’histoire, la culture et les trésors cachés de notre région. Avec des années d'expérience et un véritable amour pour leur ville, ils offrent des visites interactives, pleines de récits fascinants et de découvertes authentiques. En choisissant notre service, vous bénéficiez d'un accueil chaleureux, d'un itinéraire personnalisé selon vos envies, et de conseils précieux pour rendre votre séjour inoubliable.</p>
+    
+    </section>
+      
+
+    
+      
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>GUIDE YOUR TRIP</h3>
+                <p>La première plateforme entièrement gratuite de mise en relation entre guides touristiques et voyageurs.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>LIENS UTILES</h3>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">CGU Touristes</a></li>
+                    <li><a href="#">CGU Guides Touristiques</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>SUIVEZ-NOUS</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p><a href="mailto:contact@guideyourtrip.com">contact@guideyourtrip.com</a></p>
+                <p><a href="#">🤝 Partenariat</a></p>
+                <p><a href="#">Linktr.ee / guideyourtrip</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 GuideYourTrip</p>
+        </div>
+    </footer>
+</body>
+</html>
+
