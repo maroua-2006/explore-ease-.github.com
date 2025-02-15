@@ -1,0 +1,1547 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Guides Touristiques</title>
+    <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: url(acceuil.jpg);
+            color: #333;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            color: #fefefe;
+            width: 90%;
+            height: 50px;
+            border-radius: 1rem;
+            margin-top: 30px;
+            background-color: rgba(239, 230, 230, 0.253);
+            backdrop-filter: blur(3px);
+            box-shadow: 8px 8px 15px black -8px -8px 15px black;
+            overflow: hidden;
+            position: fixed;
+            z-index: 100;
+        }
+        .logo {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+        .logo img {
+            width: 40px;
+        }
+        .menu {
+            width: 50%;
+        }
+        .menu ul {
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+        .menu ul li {
+            list-style: none;
+            margin-right: 30px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: #fefefe;
+            position: relative;
+        }
+        .menu ul li a:after {
+            content: '';
+            bottom: -3px;
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background-color: #fefefe;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0px;
+        }
+        .menu ul li a:hover,
+        .menu ul li a:hover:after,
+        .menu ul li a.active::after,
+        .menu ul li a.active {
+            width: 100%;
+            left: 0;
+            font-weight: bold;
+        }
+        .search-bar {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-bar p {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+        .search-bar input {
+            background-color: #fefefe;
+            outline: none;
+            padding: 5px;
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+            border: none;
+        }
+        .search-bar .search-icon {
+            background-color: #fefefe;
+            outline: none;
+            border-top-right-radius: 13px;
+            border-bottom-right-radius: 13px;
+            border: none;
+            color: #333;
+            font-size: 1rem;
+            padding: 5.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Section des guides */
+        .guides-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .guide-card {
+            background: linear-gradient(#88b4eb, white);
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .guide-card:hover {
+            transform: scale(1.05);
+        }
+        .guide-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .guide-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .guide-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Vidéo */
+        .video-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 420px; /* hauteur de la vidéo */
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        /* Footer */
+     /* Footer */
+     footer {
+    background: #004c80;
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: #ff7f27;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/*.social-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff7f27;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid white;
+}
+
+       /* Section des commentaires */
+.comments-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.comments-box {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.comments-box h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.comments-container {
+    max-height: 300px; /* Limite de hauteur pour le scroll */
+    overflow-y: auto;  /* Ajout du défilement vertical */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.comment {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-form textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    resize: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.comment-form textarea:focus {
+    border-color: #3498db;
+}
+
+.comment-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Style pour le triangle de la zone de commentaire */
+.comment-form::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <div class="menu">
+            <ul>
+                <li><a href="acceuil.html" class="active">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <p>Search</p>
+            <input type="text" placeholder="Search...">
+            <div class="search-icon">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+
+     Vidéo -
+    <section class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo des guides" allowfullscreen></iframe>
+    </section>
+
+     Paragraphe sur le guide 
+    <section class="guide-paragraph">
+        <h2>Découvrez nos guides touristiques</h2>
+        <p>Nos guides sont des professionnels passionnés qui vous aideront à découvrir les trésors cachés des pays que vous visitez. Faites l'expérience d'une aventure inoubliable avec nos experts !</p>
+    </section>
+
+     Section des guides 
+    <section class="guides-section">
+        Guide 1
+        <div class="guide-card">
+            <img src="jean.jpg" alt="Jean Dupont">
+            <h3>Jean Dupont</h3>
+            <p><strong>Numéro :</strong> +212 123 456 789</p>
+            <p><strong>Pays visités :</strong> Maroc, Espagne, Italie</p>
+        </div>
+       - Guide 2 
+        <div class="guide-card">
+            <img src="marie.jpg" alt="Marie Leclerc">
+            <h3>Marie Leclerc</h3>
+            <p><strong>Numéro :</strong> +212 234 567 890</p>
+            <p><strong>Pays visités :</strong> France, Maroc, Égypte</p>
+        </div>
+        Ajoute les autres guides ici 
+    </section>
+
+   
+<section class="comments-section">
+    <div class="comments-box">
+        <h2>Avis de nos clients</h2>
+        <div class="comments-container">
+           
+            <div class="comment">
+                <p><strong>Jean Dupont :</strong> Ce service est incroyable! J'ai adoré chaque moment de la visite.</p>
+            </div>
+         
+            <div class="comment">
+                <p><strong>Marie Leclerc :</strong> Des guides très professionnels, je recommande vivement!</p>
+            </div>
+           
+            <div class="comment">
+                <p><strong>Mohamed Ali :</strong> Une expérience inoubliable! Merci pour votre accueil.</p>
+            </div>
+        
+            <div class="comment">
+                <p><strong>Amina Sidi :</strong> Les guides sont très bien informés et connaissent parfaitement leur région.</p>
+            </div>
+    
+            <div class="comment">
+                <p><strong>Ali Tazi :</strong> Très bonne organisation, je reviendrai sans hésiter!</p>
+            </div>
+          
+            <div class="comment">
+                <p><strong>Leila Benali :</strong> Très bonne expérience, à refaire dès que possible.</p>
+            </div>
+           
+            <div class="comment">
+                <p><strong>Youssef Idrissi :</strong> Des visites très bien organisées avec des informations intéressantes.</p>
+            </div>
+           
+            <div class="comment">
+                <p><strong>Fatima Zahra :</strong> Je recommande vivement, une équipe très accueillante et compétente.</p>
+            </div>
+        
+            <div class="comment">
+                <p><strong>Omar Farouk :</strong> Super expérience, un guide au top!</p>
+            </div>
+           
+            <div class="comment">
+                <p><strong>Karim Khadiri :</strong> Un excellent service, merci à toute l'équipe!</p>
+            </div>
+        </div>
+        <div class="comment-form">
+            <textarea placeholder="Ajouter un commentaire..."></textarea>
+            <button type="submit">Soumettre</button>
+        </div>
+    </div>
+</section>
+
+
+   <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>GUIDE YOUR TRIP</h3>
+            <p>La première plateforme entièrement gratuite de mise en relation entre guides touristiques et voyageurs.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>LIENS UTILES</h3>
+            <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">CGU Touristes</a></li>
+                <li><a href="#">CGU Guides Touristiques</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contactez-nous</a></li>
+                <li><a href="#">Plan du site</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>SUIVEZ-NOUS</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p><a href="mailto:contact@guideyourtrip.com">contact@guideyourtrip.com</a></p>
+            <p><a href="#">🤝 Partenariat</a></p>
+            <p><a href="#">Linktr.ee / guideyourtrip</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © 2025 GuideYourTrip</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Your Trip</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Header */
+        header {
+            top: 15px;
+            display: flex;
+            color: #fefefe;
+            width: 100%;
+            height: 50px;
+            border-radius: 1rem;
+            margin-top: 30px;
+            background-color: rgba(239, 230, 230, 0.253);
+            backdrop-filter: blur(3px);
+            box-shadow: 8px 8px 15px black -8px -8px 15px black;
+            position: fixed;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        .logo img {
+            width: 40px;
+        }
+
+        .menu {
+            width: 50%;
+        }
+
+        .menu ul {
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+
+        .menu ul li {
+            list-style: none;
+            margin-right: 30px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: #fefefe;
+            position: relative;
+        }
+
+        .menu ul li a:hover,
+        .menu ul li a.active::after,
+        .menu ul li a.active {
+            width: 100%;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-bar p {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+
+        .search-bar input {
+            background-color: #fefefe;
+            outline: none;
+            padding: 5px;
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+            border: none;
+        }
+
+        .search-bar .search-icon {
+            background-color: #fefefe;
+            outline: none;
+            border-top-right-radius: 13px;
+            border-bottom-right-radius: 13px;
+            border: none;
+            color: #333;
+            font-size: 1rem;
+            padding: 5.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('Valencia.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+
+        .welcome-section h1 {
+            font-size: 40px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Pays Section */
+        .pays-section {
+            padding: 40px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .pays-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .pays-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Login Form */
+        .login-form {
+            margin-top: 50px;
+            background: rgba(64, 64, 64, 0.15);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            backdrop-filter: blur(25px);
+            text-align: center;
+            color: white;
+            width: 400px;
+            box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
+            margin-bottom: 50px;
+        }
+
+        .login-form .login-title {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .input-box {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            padding: 12px 12px 12px 45px;
+            border-radius: 99px;
+            outline: 3px solid transparent;
+            transition: 0.3s;
+            font-size: 17px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .input-box input:focus {
+            outline: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .input-box input::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .input-box box-icon {
+            border: solid;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .remember-forgot-box {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+
+        .remember-forgot-box label {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .remember-forgot-box input {
+            accent-color: white;
+            cursor: pointer;
+        }
+
+        .remember-forgot-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .remember-forgot-box a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px 0;
+            background: #2F9cF4;
+            border: none;
+            border-radius: 99px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #0B87EC;
+        }
+
+        .register {
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        .register a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #004c80;
+            color: white;
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+        }
+
+        .footer-section h3 {
+            color: #ff7f27;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background: #00335B;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#pays">Pays</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <p>Search</p>
+            <input type="text">
+            <div class="search-icon">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+
+    
+    <section id="home" class="welcome-section">
+        <h1>Bienvenue sur Guide Your Trip</h1>
+    </section>
+
+    <section id="about" class="about-us">
+        <h2>À propos de nous</h2>
+        <p>Guide Your Trip est la première plateforme gratuite de mise en relation entre guides touristiques et voyageurs.</p>
+    </section>
+
+   
+    <section id="pays" class="pays-section">
+        <h2>Les Villes à Visiter</h2>
+        <p>Découvrez les villes et les destinations incontournables pour un voyage mémorable.</p>
+    </section>
+
+    
+    <section id="login">
+        <form class="login-form">
+            <h1 class="login-title">Login</h1>
+            <div class="input-box">
+                <box-icon name="user-pin"></box-icon>
+                <input type="text" placeholder="Nom d'utilisateur">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Numéro de téléphone">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Les places que vous souhaitez visiter">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="G-mail">
+            </div>
+            <div class="input-box">
+                <input type="datetime-local" placeholder="Date de votre voyage">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Nombre de personnes">
+            </div>
+            <div class="input-box">
+                <box-icon name="lock-alt"></box-icon>
+                <input type="password" placeholder="Mot de passe">
+            </div>
+            <div class="remember-forgot-box">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    Remember me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <p class="register">Don't have an account? <a href="#">Register</a></p>
+        </form>
+    </section>
+
+   
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>GUIDE YOUR TRIP</h3>
+                <p>La première plateforme entièrement gratuite de mise en relation entre guides touristiques et voyageurs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">CGU Touristes</a></li>
+                    <li><a href="#">CGU Guides Touristiques</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SUIVEZ-NOUS</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p><a href="mailto:contact@guideyourtrip.com">contact@guideyourtrip.com</a></p>
+                <p><a href="#">🤝 Partenariat</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GuideYourTrip</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide des Touristes</title>
+  <style>
+    /* Réinitialisation de la mise en page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mise en page générale */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header{
+    display: flex;
+    color:#fefefe;         
+    width: 90%;
+    height: 50px;
+    border-radius: 1rem;
+    margin-top: 30px;
+    background-color: rgba(239, 230, 230,0.253);
+    backdrop-filter: blur(3px);
+    box-shadow: 8px 8px 15px black
+               -8px -8px 15px black;
+    overflow: hidden;
+    position:fixed;
+    z-index: 100;
+}
+.logo{
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.logo img{
+    width: 40px;
+}
+.menu{
+   
+    width: 50%;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.menu ul li {
+    list-style: none;
+    margin-right: 30px;
+}
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:#fefefe;
+    position: relative;
+}
+.menu ul li a:after{
+    content: '';
+    bottom: -3px;
+    display: block;
+    height: 2px;
+    left:50%;
+    position:absolute;
+    background-color: #fefefe;
+    transition: width 0.3s ease 0s,left 0.3s ease 0s;
+    width: 0px;
+}
+.menu ul li a:hover,
+.menu ul li a:hover:after,
+.menu ul li a.active::after,
+.menu ul li a.active
+{
+  width: 100%;
+  left: 0;
+  font-weight: bold;  
+}
+.search-bar{
+   width: 30%;
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.search-bar p{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.search-bar input{
+    background-color: #fefefe;
+    outline: none;
+    padding: 5px;
+    border-top-left-radius:13px ;
+    border-bottom-left-radius: 13px;
+    border: none;
+}
+.search-bar .search-icon{
+    background-color: #fefefe;
+    outline: none;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border: none;
+    color:#333;
+    font-size: 1rem;
+    padding: 5.5px;
+    display: flex;
+    align-items: center;
+}
+
+.about, .services {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.png" alt=""></div>
+        <div class="menu">
+            <ul>
+               <li><a href="acceuil.html" class="active">home</a></li>
+               <li><a href="test.html">oubout us</a></li> 
+               <li><a href="aboutus.html">pays</a></li> 
+               <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <p>search</p>
+            <input type="text">
+            <div class="search-icon">
+               <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+
+  <section class="about">
+    <h2>À propos de notre service</h2>
+    <p>Nous sommes ici pour vous aider à découvrir les meilleurs endroits de notre ville. Nos guides locaux sont prêts à vous montrer les attractions cachées, les restaurants et les événements à ne pas manquer.</p>
+  </section>
+
+  <section class="services">
+    <div class="service-box">
+      <h3>Visites guidées</h3>
+      <p>Profitez d'une visite guidée personnalisée de la ville avec un expert local.</p>
+    </div>
+    <div class="service-box">
+      <h3>Réservation d'hôtel</h3>
+      <p>Nous vous aidons à réserver des hôtels avec les meilleures offres à proximité.</p>
+    </div>
+    <div class="service-box">
+      <h3>Transport</h3>
+      <p>Nos services de transport vous permettent de voyager facilement à travers la ville.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Guide des Touristes. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide des Touristes</title>
+  <style>
+    /* Réinitialisation de la mise en page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mise en page générale */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 50px;
+  background-color: #3498db;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.about, .services {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInImage 1.5s forwards;
+}
+
+/* Animation pour le texte */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation pour l'image */
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+
+/* Section Pourquoi Choisir notre Guide */
+.why-choose-us {
+  background-color: #e3f2fd;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 15px;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.why-choose-us p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Animation pour le texte */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Section vidéo */
+.video-section {
+  text-align: center;
+  padding: 40px;
+  margin: 20px auto;
+  background-color: #f1f1f1;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+.video-section h2 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 10px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Section formulaire */
+.appointment-form {
+  background-color: #f9f9f9;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.appointment-form h2 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.appointment-form label {
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+.appointment-form input, .appointment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.appointment-form button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appointment-form button:hover {
+  background-color: #2980b9;
+}
+
+.video-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  max-width: 800px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.video-thumbnail img:hover {
+  transform: scale(1.05);
+}
+
+.video-popup {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-popup iframe {
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #2980b9;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur notre site de guide touristique</h1>
+  </header>
+
+  <section class="about">
+    <h2>À propos de notre service</h2>
+    <p>Nous sommes ici pour vous aider à découvrir les meilleurs endroits de notre ville. Nos guides locaux sont prêts à vous montrer les attractions cachées, les restaurants et les événements à ne pas manquer.</p>
+  </section>
+
+  <section class="services">
+    <div class="service-box">
+      <h3>Visites guidées</h3>
+      <p>Profitez d'une visite guidée personnalisée de la ville avec un expert local.</p>
+      <img src="sevices.jpg" alt="Visites guidées" class="service-image">
+    </div>
+    <div class="service-box">
+      <h3>Réservation d'hôtel</h3>
+      <p>Nous vous aidons à réserver des hôtels avec les meilleures offres à proximité.</p>
+      <img src="hotel.jpg" alt="Réservation d'hôtel" class="service-image">
+    </div>
+    <div class="service-box">
+      <h3>Transport</h3>
+      <p>Nos services de transport vous permettent de voyager facilement à travers la ville.</p>
+      <img src="bus.jpg" alt="Transport" class="service-image">
+    </div>
+  </section>
+
+
+  <section class="why-choose-us">
+    <h2>Pourquoi choisir notre guide ?</h2>
+    <p>Notre équipe de guides locaux expérimentés est passionnée par l'histoire et la culture de notre ville. Nous offrons des visites personnalisées qui s'adaptent à vos intérêts, que vous soyez un amateur d'art, un passionné d'architecture ou un aventurier en quête de découvertes authentiques. Choisir notre service, c'est s'assurer une expérience enrichissante et mémorable, loin des circuits touristiques classiques.</p>
+    <h2>Les caractéristiques de nos guides et de notre service</h2>
+    <p>Nos guides sont des experts locaux, passionnés par l’histoire, la culture et les trésors cachés de notre région. Avec des années d'expérience et un véritable amour pour leur ville, ils offrent des visites interactives, pleines de récits fascinants et de découvertes authentiques. En choisissant notre service, vous bénéficiez d'un accueil chaleureux, d'un itinéraire personnalisé selon vos envies, et de conseils précieux pour rendre votre séjour inoubliable.</p>
+
+</section>
+  
+  
+<section class="video-section">
+    <h2>Découvrez notre guide en action !</h2>
+    <div class="video-container">
+      <iframe width="560" height="315" src="couverture.jpg" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+
+  <section class="appointment-form">
+    <h2>Prendre un Rendez-vous</h2>
+    <form action="submit_form.php" method="POST">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required placeholder="Votre nom">
+  
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required placeholder="Votre email">
+  
+      <label for="appointment-date">Date du rendez-vous :</label>
+      <input type="date" id="appointment-date" name="appointment_date" required>
+  
+      <label for="appointment-time">Heure du rendez-vous :</label>
+      <input type="time" id="appointment-time" name="appointment_time" required>
+  
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="4" placeholder="Écrivez un message (facultatif)"></textarea>
+  
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+  
+
+
+  <section class="video-container">
+    <h2>Découvrez notre vidéo</h2>
+    <!-- Image cliquable -->
+    <div class="video-thumbnail" onclick="showVideo()">
+      <img src="https://via.placeholder.com/800x450.png?text=Cliquez+ici+pour+regarder+la+vidéo" alt="Image de la vidéo">
+    </div>
+    <!-- Conteneur pour la vidéo YouTube -->
+    <div class="video-popup" id="videoPopup">
+      <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <button class="close-button" onclick="closeVideo()">Fermer</button>
+    </div>
+  </section>
+  
+  
+
+  <footer>
+    <p>&copy; 2025 Guide des Touristes. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
+
+
